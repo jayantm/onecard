@@ -1,5 +1,5 @@
 <ion-view title="Sign In">
-  <ion-content class="main-login-page content-bg overlay-content" scroll="false" >
+  <ion-content ng-controller="LoginController" class="main-login-page content-bg overlay-content" scroll="false" >
         <div class="list">
         <label class="item item-input username">
           <input type="text" placeholder="Username" ng-model="user.username">
@@ -14,17 +14,17 @@
         Signin
       </button>
       <hr />
-      <button class="button button-full button-google hide-on-keyboard-open" ng-click="authenticate('google')">
+      <button class="button button-full button-google hide-on-keyboard-open" ng-click="LoginWithGoogle()">
         Signin with GOOGLE
       </button>
 
-      <button class="button button-full button-facebook hide-on-keyboard-open" ng-click="authenticate('facebook')">
+      <button class="button button-full button-facebook hide-on-keyboard-open" ng-click="LoginWithFacebook()">
         Signin with FACEBOOK
       </button>
 
-      <button class="button button-full button-twitter hide-on-keyboard-open" ng-click="authenticate('google')">
+      <!--<button class="button button-full button-twitter hide-on-keyboard-open" ng-click="authenticate('google')">
         Signin with Twitter
-      </button>
+      </button>-->
 
   </ion-content>
 </ion-view>
